@@ -3,8 +3,13 @@ title: "Tools for Quantitative Archaeology – in R"
 authors:
   - "Joe Roe <<joe@joeroe.io>>"
 date: "`r Sys.Date()`"
-output: github_document
+output:
+  md_document:
+    variant: "markdown_github"
+    preserve_yaml: true
 ---
+
+<!-- Generated from README.Rmd -->
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -36,9 +41,12 @@ Matt Peeples has also [ported many to R scripts](https://mattpeeples.net/?page_i
 This list should therefore be seen as list of alternatives to TFQA (for those who prefer R, open source software, and/or cannot run DOS programs), rather than superseding it.
 
 This is a work-in-progress.
-Please feel free to contribute by [submitting a pull request]() or [opening an issue]() with suggestions.
+Please feel free to contribute by [editing the table](/sslarch/tfqar/blob/main/tfqar.csv) and submitting a pull request, or [opening an issue](/sslarch/tfqar/issues) with suggestions.
 
 ## R equivalents of TFQA programs
+
+Generated from [tfqar.csv](/sslarch/tfqar/blob/main/tfqar.csv).
+
 ```{r tfqar-functions, include=FALSE}
 md_collapse <- function(x, nwords = 10) {
   summary <- word(x, end = nwords)
