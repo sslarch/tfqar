@@ -1,13 +1,6 @@
----
-title: "Tools for Quantitative Archaeology – in R"
-authors:
-  - "Joe Roe <<joe@joeroe.io>>"
-date: "2020-11-06"
-output:
-  md_document:
-    variant: "markdown_github"
-    preserve_yaml: true
----
+Tools for Quantitative Archaeology – in R
+================
+2020-11-06
 
 <!-- Generated from README.Rmd -->
 
@@ -45,13 +38,12 @@ This is a work-in-progress. Please feel free to contribute by [editing
 the table](/sslarch/tfqar/blob/main/tfqar.csv) and submitting a pull
 request, or [opening an issue](/sslarch/tfqar/issues) with suggestions.
 
-R equivalents of TFQA programs
-------------------------------
+## R equivalents of TFQA programs
 
 Generated from [tfqar.csv](/sslarch/tfqar/blob/main/tfqar.csv).
 
 <!--html_preserve-->
-<div id="ckxxmrkxau"
+<div id="nbqntoyncc"
 style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 
 <table class="gt_table">
@@ -127,7 +119,7 @@ stats
 
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
-stats::fisher_test()
+stats::fisher\_test()
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 </td>
@@ -160,7 +152,7 @@ Yes
 
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
-sf::st_join()
+sf::st\_join()
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 
@@ -485,7 +477,7 @@ Yes
 
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
-tabula::index_richness()<br />tabula::index_heterogeneity()<br />vegan::renyi()
+tabula::index\_richness()<br />tabula::index\_heterogeneity()<br />vegan::renyi()
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 
@@ -729,7 +721,7 @@ Yes
 
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
-tabula::plot_ford()
+tabula::plot\_ford()
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 
@@ -897,7 +889,7 @@ rcarbon::plot()<br />rcarbon::spd()
 </tr>
 <tr>
 <td class="gt_row gt_left" style="vertical-align: top;">
-CALCULATE_K
+CALCULATE\_K
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 <details>
@@ -1289,7 +1281,7 @@ Yes
 
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
-ggplot2::geom_point()
+ggplot2::geom\_point()
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 </td>

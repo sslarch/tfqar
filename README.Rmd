@@ -3,10 +3,7 @@ title: "Tools for Quantitative Archaeology – in R"
 authors:
   - "Joe Roe <<joe@joeroe.io>>"
 date: "`r Sys.Date()`"
-output:
-  md_document:
-    variant: "markdown_github"
-    preserve_yaml: true
+output: github_document
 ---
 
 <!-- Generated from README.Rmd -->
