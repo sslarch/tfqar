@@ -1,0 +1,82 @@
+---
+title: "Tools for Quantitative Archaeology – in R"
+authors:
+  - "Joe Roe <<joe@joeroe.io>>"
+date: "`r Sys.Date()`"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "readme_figures/"
+)
+
+library("tidyverse", warn.conflicts = FALSE)
+library("gt")
+```
+
+[Tools for Quantitative Archaeology](http://tfqa.com) (TFQA) is a collection of DOS programs developed by Keith Kintigh to perform statistical analyses used in archaeology.
+TFQA includes 50 programs and so gives a good representation of the range of analyses used by archaeologists.
+The purpose of this document is to track which of these analyses are currently available in R packages.
+We hope it will be useful in both porting TFQA-based analyses to R, and in highlighting which methods are not yet implemented in R packages.
+
+The table below presents a list of [TFQA programs](http://tfqa.com/programs.htm) and their equivalent functions in R.
+By "equivalent", we mean R functions that provide substantially the same functionality as the original TFQA program with a similar high-level user interface; 
+we can assume that all of the analyses listed can be performed in R if the user is prepared to reimplement them themselves. 
+The list of R equivalents is also not intended to be exhaustive.
+The packages/functions listed are a subjective assessment of the "best" (most complete/widely used/actively maintained) way to get the same results as the TFQA program using R.
+See [open-archeo.info](http://open-archaeo.info/) for a general list of archaeology-related R packages.
+
+TFQA is still available and actively maintained.
+Some of the more recently added programs are also available as free and open source software (see <https://github.com/kintigh>).
+Matt Peeples has also [ported many to R scripts](https://mattpeeples.net/?page_id=656).
+This list should therefore be seen as list of alternatives to TFQA (for those who prefer R, open source software, and/or cannot run DOS programs), rather than superseding it.
+
+This is a work-in-progress.
+Please feel free to contribute by [submitting a pull request]() or [opening an issue]() with suggestions.
+
+## R equivalents of TFQA programs
+```{r tfqar-functions, include=FALSE}
+md_collapse <- function(x, nwords = 10) {
+  summary <- word(x, end = nwords)
+  summary[is.na(summary)] <- x[is.na(summary)]
+  collapsed <- paste0("<details>",
+                      paste0("<summary>", summary, "...</summary>"),
+                      x,
+                      "</details>",
+                      sep = "\n")
+  x[x != summary] <- collapsed[x != summary]
+  return(x)
+}
+
+plain_list <- function(x) {
+  x <- str_remove_all(x, " ")
+  x <- str_replace_all(x, ",", "<br />")
+  return(x)
+}
+```
+
+```{r tfqar-table, echo=FALSE}
+tfqar <- read_csv("tfqar.csv", col_types = "ccccccc")
+
+tfqar %>% 
+  group_by(tfqa_group) %>% 
+  gt() %>% 
+  cols_label(tfqa_program = "TFQA Program",
+             tfqa_description = "Description",
+             r = "Available in R?",
+             r_package = "R package(s)",
+             r_function = "R function(s)",
+             notes = "Notes") %>% 
+  fmt_missing(everything(), missing_text = "") %>% 
+  text_transform(cells_body(vars(tfqa_description)), md_collapse) %>% 
+  text_transform(cells_body(vars(r_function)), plain_list) %>% 
+  fmt_markdown(vars(r_package, notes)) %>% 
+  tab_source_note(md("TFQA program descriptions copied from <http://tfqa.com/programs.htm>")) %>% 
+  tab_style(cell_text(weight = "bold"), 
+            list(cells_column_labels(everything()), cells_row_groups())) %>%
+  tab_style(cell_text(v_align = "top"), cells_body())
+```
