@@ -43,7 +43,7 @@ request, or [opening an issue](/sslarch/tfqar/issues) with suggestions.
 Generated from [tfqar.csv](/sslarch/tfqar/blob/main/tfqar.csv).
 
 <!--html_preserve-->
-<div id="nbqntoyncc"
+<div id="tkfuojkoud"
 style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 
 <table class="gt_table">
@@ -174,10 +174,21 @@ HOA
 Computes Hodder and Okell’s A and dispersion ratios
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
+Yes
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
+
+<div class="gt_from_md">
+
+<p>
+<a href="https://cran.r-project.org/web/packages/GmAMisc/index.html">GmAMisc</a>
+</p>
+
+</div>
+
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
+GmAMisc::Aindex()
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 </td>
@@ -885,6 +896,16 @@ Yes
 rcarbon::plot()<br />rcarbon::spd()
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
+
+<div class="gt_from_md">
+
+<p>
+Also <a href="http://stratigraphr.joeroe.io/">stratigraphr</a> for tidy
+alternatives.
+</p>
+
+</div>
+
 </td>
 </tr>
 <tr>
@@ -903,12 +924,23 @@ Normal Distribution. See Cowgill and Kintigh (2020).
 </details>
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
+No
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
+
+<div class="gt_from_md">
+
+<p>
+Pascal source available:
+<a href="https://github.com/kintigh/phaselen">kintigh/phaselen</a>
+</p>
+
+</div>
+
 </td>
 </tr>
 <tr>
@@ -974,12 +1006,23 @@ calibration.
 </details>
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
+No
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
+
+<div class="gt_from_md">
+
+<p>
+Pascal source available:
+<a href="https://github.com/kintigh/phaselen">kintigh/phaselen</a>
+</p>
+
+</div>
+
 </td>
 </tr>
 <tr>
@@ -1005,12 +1048,23 @@ matches the simulated number of rooms.
 </details>
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
+No
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
+
+<div class="gt_from_md">
+
+<p>
+Pascal source available:
+<a href="https://github.com/kintigh/RoomAccum">kintigh/RoomAccum</a>.
+</p>
+
+</div>
+
 </td>
 </tr>
 <tr class="gt_group_heading_row">
@@ -1038,12 +1092,23 @@ Shott, and Welch (1983) and revised in Kintigh (1988).
 </details>
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
+No
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
 </td>
 <td class="gt_row gt_left" style="vertical-align: top;">
+
+<div class="gt_from_md">
+
+<p>
+Could be implemented in
+<a href="https://github.com/joeroe/fieldwalkr">fieldwalkr</a>
+</p>
+
+</div>
+
 </td>
 </tr>
 <tr>
