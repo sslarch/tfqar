@@ -76,12 +76,13 @@ tfqar %>%
              r_package = "R package(s)",
              r_function = "R function(s)",
              notes = "Notes") %>% 
-  fmt_missing(everything(), missing_text = "") %>% 
-  text_transform(cells_body(vars(tfqa_description)), md_collapse) %>% 
-  text_transform(cells_body(vars(r_function)), plain_list) %>% 
-  fmt_markdown(vars(r_package, notes)) %>% 
+  sub_missing(everything(), missing_text = "") %>% 
+  text_transform(md_collapse, cells_body(tfqa_description)) %>% 
+  text_transform(plain_list, cells_body(r_function)) %>% 
+  fmt_markdown(c(r_package, notes)) %>% 
   tab_source_note(md("TFQA program descriptions copied from <http://tfqa.com/programs.htm>")) %>% 
   tab_style(cell_text(weight = "bold"), 
             list(cells_column_labels(everything()), cells_row_groups())) %>%
-  tab_style(cell_text(v_align = "top"), cells_body())
+  tab_style(cell_text(v_align = "top"), cells_body()) %>%
+  as_raw_html()
 ```
